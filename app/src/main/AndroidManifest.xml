@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.atrue.bluelocking_final" >
+
+        <uses-permission android:name="android.permission.BLUETOOTH" />
+        <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+        <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+        <uses-permission android:name="android.permission.INTERNET"/>
+
+        <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+            <activity android:name=".BlueLocking">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <action android:name="android.bluetooth.device.action.ACL_DISCONNECT_REQUESTED" />
+                    <action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED" />
+                    <action android:name="android.bluetooth.adapter.action.DISCOVERY_STARTED" />
+
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
+            <activity
+                android:name=".BlueLogin"
+                android:label="BlueLogin" />
+            <activity
+                android:name=".BlueTryConnecting"
+                android:label="BlueTryConnecting" />
+            <activity android:name=".BlueLoginFP"
+                android:label=".BlueLoginFP" />
+        </application>
+
+    </manifest>
